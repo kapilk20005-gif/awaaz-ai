@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Dashboard from "./pages/Dashboard";
 import Documents from "./pages/Documents";
-import Jobs from "./pages/jobs";
+import Jobs from "./pages/Jobs";
 import AIChat from "./pages/AIChat";
 import Schemes from "./pages/Schemes";
 import Verification from "./pages/Verification";

@@ -6,8 +6,10 @@ import {
   Briefcase,
   Landmark,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Landing() {
+  const navigate = useNavigate();
   const features = [
     {
       title: "Document Readiness",
@@ -97,11 +99,17 @@ export default function Landing() {
         </h1>
 
         <div className="flex gap-4">
-          <button className="px-5 py-2 rounded-lg border border-slate-700">
+          <button
+            onClick={() => navigate("/login")}
+            className="px-5 py-2 rounded-lg border border-slate-700"
+          >
             Login
           </button>
 
-          <button className="px-5 py-2 rounded-lg bg-blue-600">
+          <button
+            onClick={() => navigate("/signup")}
+            className="px-5 py-2 rounded-lg bg-blue-600"
+          >
             Sign Up
           </button>
         </div>
@@ -123,11 +131,17 @@ export default function Landing() {
         </p>
 
         <div className="mt-10 flex justify-center gap-4">
-          <button className="bg-blue-600 px-8 py-3 rounded-xl">
+          <button
+            onClick={() => navigate("/dashboard")}
+            className="bg-blue-600 px-8 py-3 rounded-xl"
+          >
             Get Started
           </button>
 
-          <button className="border border-slate-700 px-8 py-3 rounded-xl">
+          <button
+            onClick={() => navigate("/dashboard")}
+            className="border border-slate-700 px-8 py-3 rounded-xl"
+          >
             Watch Demo
           </button>
         </div>
@@ -184,7 +198,10 @@ export default function Landing() {
       Start Your Citizen Readiness Journey
     </h2>
 
-    <button className="mt-8 bg-white text-black px-8 py-4 rounded-2xl font-bold">
+    <button
+      onClick={() => navigate("/dashboard")}
+      className="mt-8 bg-white text-black px-8 py-4 rounded-2xl font-bold"
+    >
       Launch AWAAZ AI
     </button>
   </div>
